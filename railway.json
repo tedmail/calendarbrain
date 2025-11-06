@@ -1,0 +1,14 @@
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "restartPolicyType": "ON_FAILURE"
+  },
+  "env": {
+    "TIMEZONE": "America/Sao_Paulo",
+    "GOOGLE_CLIENT_SECRETS_FILE": "client_secret.json",
+    "MS_TENANT_ID": "common",
+    "OPENAI_MODEL": "gpt-4o-mini"
+  }
+}

@@ -1,0 +1,11 @@
+app = "calendar-brain"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[[services]]
+  internal_port = 8000
+  protocol = "tcp"
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80

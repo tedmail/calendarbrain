@@ -1,0 +1,24 @@
+services:
+- type: web
+  name: calendar-brain
+  env: docker
+  plan: free
+  autoDeploy: true
+  healthCheckPath: /docs
+  envVars:
+  - key: TIMEZONE
+    value: America/Sao_Paulo
+  - key: BASE_URL
+    sync: false
+  - key: GOOGLE_CLIENT_SECRETS_FILE
+    value: client_secret.json
+  - key: MS_CLIENT_ID
+    sync: false
+  - key: MS_CLIENT_SECRET
+    sync: false
+  - key: MS_TENANT_ID
+    value: common
+  - key: OPENAI_API_KEY
+    sync: false
+  - key: OPENAI_MODEL
+    value: gpt-4o-mini
